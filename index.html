@@ -7,8 +7,22 @@
   <h1>てすと！</h1>
   <audio controls controlslist="nodownload" loop src="./shallwe.mp3"></audio>
   <p>あれ貼っときます。</p>
-  <p>chrome-extension://jcdhmojfecjfmbdpchihbeilohgnbdci/_generated_background_page.html</p>
-  <p>chrome://kill</p>
+  <input id="copy1" type="text" value="chrome-extension://jcdhmojfecjfmbdpchihbeilohgnbdci/_generated_background_page.html" readonly>
+<button onclick="cp()">コピーする</button>
+<script>function cp(){
+        var txt = document.getElementById("copy1");
+        txt.select();
+        document.execCommand("Copy");
+    }
+</script>
+    <input id="copy2" type="text" value="chrome://kill" readonly>
+<button onclick="cp1()">コピーする</button>
+<script>function cp1(){
+        var txta = document.getElementById("copy2");
+        txta.select();
+        document.execCommand("Copy");
+    }
+</script>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/9L1ova1YfK0" title="YouTube video player" frameborder="0" allow="accelerometer; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
