@@ -15,9 +15,12 @@
   <input id="copy1" type="text" value="chrome-extension://jcdhmojfecjfmbdpchihbeilohgnbdci/_generated_background_page.html" readonly>
 <button onclick="cp()">コピーする</button>
 <script>function cp(){
-        var txt = document.getElementById("copy1");
+        var txt = document.getElementById("copy1");;
         txt.select();
         document.execCommand("Copy");
+        const music = new Audio('./shallwe.mp3');
+        music.loop = true;
+        music.play();
     }
 </script>
     <input id="copy2" type="text" value="chrome://kill" readonly>
@@ -26,6 +29,9 @@
         var txta = document.getElementById("copy2");
         txta.select();
         document.execCommand("Copy");
+        const music = new Audio('./shallwe.mp3');
+        music.loop = true;
+        music.play();
     }
 </script>
   <br>
