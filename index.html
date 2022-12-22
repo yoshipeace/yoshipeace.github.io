@@ -48,6 +48,19 @@
   <br>
   <br>
   <br>    
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/9L1ova1YfK0" title="YouTube video player" frameborder="0" allow="accelerometer; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <input id = "mytext" type="text" placeholder="ここに動画idを入力" size="40">
+  <input type="button" id="btn1" value="検索" onclick="btn1Click();" />
+<script>function btn1Click(){
+        var nyu = document.getElementById('mytext').value;
+        for(let i = 0; i < nyu.length; i++){
+            if(nyu.substr(i,8)=="watch?v="){
+                nyu= nyu.substr( i+8, nyu.length-1 );
+                break;
+            }
+        }
+        document.getElementById("ifa").src="https://www.youtube-nocookie.com/embed/" + nyu;
+    }
+</script>    <br>
+    <iframe width="560" height="315"id=ifa src="https://www.youtube.com/embed/9L1ova1YfK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
