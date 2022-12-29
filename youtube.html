@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-6KP9PHC5WE');
 </script>
     <title>YouTube回避.com</title>
@@ -19,24 +18,21 @@
     <input type="submit" value="送信">
 </form>
 <script>
-    document.formai.forma.focus();
-    window.onload = function() {
     const url = new URL(window.location.href);
     const params = url.searchParams;
     let nyu = params.get("forma");
-    if(nyu!=""){
+    if(nyu===null)
+    document.formai.forma.focus();
+    window.onload = function() {
     for (let i = 0; i < nyu.length; i++) {
         if (nyu.substr(i, 8) == "watch?v=") {
             nyu = nyu.substr(i + 8, nyu.length - 1);
             break;
         }
-    }
     document.getElementById("ifa").src = "https://www.youtube-nocookie.com/embed/" + nyu;
     }
 }
 </script>    <br>
-
 <iframe width = "720" height = "405"id = ifa src = "https://www.youtube.com/embed/9L1ova1YfK0" title = "YouTube video player" frameborder = "0" allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 </body>
 </html>
