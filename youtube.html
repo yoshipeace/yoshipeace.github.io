@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6KP9PHC5WE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6KP9PHC5WE');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KP9PHC5WE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6KP9PHC5WE');
+    </script>
     <title>YouTube回避.com</title>
-  <link rel="icon" href="/favicon.ico" id="favicon">
+    <link rel="icon" href="/favicon.ico" id="favicon">
 </head>
 <body>
-<form action="" method="get" name="formai" class="form">
-    <input type="text" name="forma" autocomplete="off" placeholder = "ここに動画のurlを入力" id="forma" size=40 required>
-    <input type="submit" value="送信">
-</form>
-<script>
-    const url = new URL(window.location.href);
-    const params = url.searchParams;
-    let nyu = params.get("forma");
-    if(nyu===null)
-    document.formai.forma.focus();
-    window.onload = function() {
-    for (let i = 0; i < nyu.length; i++) {
-        if (nyu.substr(i, 8) == "watch?v=") {
-            nyu = nyu.substr(i + 8, nyu.length - 1);
-            break;
+    <form action="" method="get" name="formai" class="form">
+        <input type="text" name="forma" autocomplete="off" placeholder="ここに動画のurlを入力" id="forma" size=40 required>
+        <input type="submit" value="送信">
+    </form>
+    <script>
+        const url = new URL(window.location.href);
+        const params = url.searchParams;
+        let nyu = params.get("forma");
+        if (nyu === null) document.formai.forma.focus();
+        window.onload = function () {
+            if (nyu !== null) {
+                for (let i = 0; i < nyu.length; i++) {
+                    if (nyu.substr(i, 8) == "watch?v=") {
+                        nyu = nyu.substr(i + 8, nyu.length - 1);
+                        break;
+                    }
+                }
+                document.getElementById("ifa").src = "https://www.youtube-nocookie.com/embed/" + nyu;
+            }
         }
-    document.getElementById("ifa").src = "https://www.youtube-nocookie.com/embed/" + nyu;
-    }
-}
-</script>    <br>
-<iframe width = "720" height = "405"id = ifa src = "https://www.youtube.com/embed/9L1ova1YfK0" title = "YouTube video player" frameborder = "0" allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </script>    <br>
+
+    <iframe width="720" height="405" id=ifa src="https://www.youtube.com/embed/9L1ova1YfK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </body>
 </html>
