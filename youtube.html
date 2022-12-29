@@ -14,10 +14,16 @@
   <link rel="icon" href="/favicon.ico" id="favicon">
 </head>
 <body>
-<input id = "mytext" type = "text" placeholder = "ここに動画のurlを入力" size = "40">
-<input type = "button" id = "btn1" value = "検索" onclick = "btn1Click();" / >
-<script>function btn1Click() {
-    var nyu = document.getElementById('mytext').value;
+<form action="" method="get" class="form">
+    <input type="text" name="forma" placeholder = "ここに動画のurlを入力" id="forma" size=40　style="height: 50em;" required>
+    <input type="submit" value="送信">
+</form>
+<script>
+    window.onload = function() {
+    const url = new URL(window.location.href);
+    const params = url.searchParams;
+    let nyu = params.get("forma");
+    if(nyu!=""){
     for (let i = 0; i < nyu.length; i++) {
         if (nyu.substr(i, 8) == "watch?v=") {
             nyu = nyu.substr(i + 8, nyu.length - 1);
@@ -25,6 +31,7 @@
         }
     }
     document.getElementById("ifa").src = "https://www.youtube-nocookie.com/embed/" + nyu;
+    }
 }
 </script>    <br>
 
