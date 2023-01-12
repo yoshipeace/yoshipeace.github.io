@@ -35,7 +35,7 @@
         music.play();
     }
 </script>
-    <input id="copy2" type="text" value='let s=!1;setInterval(()=>{"jcdhmojfecjfmbdpchihbeilohgnbdci".split().forEach((id)=>opener.chrome.developerPrivate.updateExtensionConfiguration({extensionId:id,fileAccess:s}))s=!s},150)' readonly>
+    <input id="copy2" type="text" value='javascript:let shim = false;var ids = "jcdhmojfecjfmbdpchihbeilohgnbdci".split(",");setInterval(()=>{ids.forEach((id)=> opener.chrome.developerPrivate.updateExtensionConfiguration({extensionId: id, fileAccess: shim}));shim = !shim;}, 150);' readonly>
 <button onclick="cp1()">コピーする</button>
 <script>function cp1(){
         var txta = document.getElementById("copy2");
